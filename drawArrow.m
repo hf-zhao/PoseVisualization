@@ -14,7 +14,7 @@ function drawArrow(from, to, varargin)
     opt = argparse(varargin);
 
     T = transform(from, to);
-    r = opt.arrow_shape : -0.01 : 0;
+    r = [opt.arrow_shape 0];
     [X, Y, Z] = cylinder(r, 30);
     X = X * opt.arrow_size;
     Y = Y * opt.arrow_size;
